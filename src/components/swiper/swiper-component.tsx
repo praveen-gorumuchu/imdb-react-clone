@@ -7,6 +7,7 @@ import { VscArrowSmallLeft, VscArrowSmallRight } from "react-icons/vsc";
 import "./swiper-component.scss";
 import { SwiperDataConfigModel } from "./swiper-data.model";
 import { ButtonModel } from "@/models/button.model";
+import { ICONS_MAP } from "@/utils/icons-mappers";
 
 export interface SwiperItem {
   title: string;
@@ -64,39 +65,44 @@ const SwiperComponent: React.FC<SwiperWrapperProps> = ({
         onSwiper={(swiper) => (swiperRef.current = swiper)}
         loop
       >
-        {items.map((item: SwiperDataConfigModel, index: number) => (
-          <SwiperSlide key={index}>
-            <div className="flex flex-col items-center justify-center text-center text-white h-[80vh] bg-cover bg-center custom-swiper-slide">
-              <img src={item.image} alt="" className="swiper-iimage" />
-              <div className="absolute inset-0 bg-black/50"></div>
-              <div className="swiper-content">
-                <h1 className="mb-4 text-5xl font-bold">{item.title}</h1>
-                {item.subTitle && (
-                  <p className="max-w-xl mx-auto text-lg text-gray-200">
-                    {item.subTitle}
-                  </p>
-                )}
-                {item?.des && (
-                  <p className="max-w-xl mx-auto mt-2 text-gray-300">
-                    {item?.des}
-                  </p>
-                )}
-                <div className="swiper-slide-buttons">
-                  {item?.buttons.map((btn: ButtonModel, idx: number) => (
-                    <button
-                      type="button"
-                      className={`mx-2 siwper-cta ${btn?.btnType}`}
-                      key={idx}
-                    >
-                      <span>{btn?.icon}</span>
-                      <span>{btn?.btnName}</span>
-                    </button>
-                  ))}
+        {items.map((item: SwiperDataConfigModel, index: number) => {
+          return (
+            <SwiperSlide key={index}>
+              <div className="flex flex-col items-center justify-center text-center text-white h-[80vh] bg-cover bg-center custom-swiper-slide">
+                <img src={item.image} alt="" className="swiper-iimage" />
+                <div className="absolute inset-0 bg-black/50"></div>
+                <div className="swiper-content">
+                  <h1 className="mb-4 text-5xl font-bold">{item.title}</h1>
+                  {item.subTitle && (
+                    <p className="max-w-xl mx-auto text-lg text-gray-200">
+                      {item.subTitle}
+                    </p>
+                  )}
+                  {item?.des && (
+                    <p className="max-w-xl mx-auto mt-2 text-gray-300">
+                      {item?.des}
+                    </p>
+                  )}
+                  <div className="swiper-slide-buttons">
+                    {item?.buttons.map((btn: ButtonModel, idx: number) => {
+                      const BtnIcon = btn?.icon ? ICONS_MAP[btn?.icon] : null; 
+                      return (
+                        <button
+                          type="button"
+                          className={`mx-2 siwper-cta ${btn?.btnType}`}
+                          key={idx}
+                        >
+                          <span>{BtnIcon && <BtnIcon className="" />}</span>
+                          <span>{btn?.btnName}</span>
+                        </button>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
-            </div>
-          </SwiperSlide>
-        ))}
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
 
       {/* Controls wrapper */}

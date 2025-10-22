@@ -8,10 +8,10 @@ import { NumberConstant } from "@/constants/Numbers.constant";
 import { SwiperDataConfigModel } from "@/components/swiper/swiper-data.model";
 import { API_ERROR, StringConstant } from "@/constants/string-constant";
 import { ButtonTypeEnum } from "@/models/button.model";
-import { FiPlus } from "react-icons/fi";
 import { env } from "@/config/env";
 import './hero.scss';
 import { StorageConst } from "@/constants/storage-constant";
+import { IconConst } from "@/utils/icons-mappers";
 
 export default function Hero() {
   const [heroData, setHeroData] = useState<SwiperDataConfigModel[]>([]);
@@ -32,8 +32,9 @@ export default function Hero() {
     if(getMoviesFromSession) {
       setHeroData(JSON.parse(getMoviesFromSession));
       setLoading(false);
+    } else {
+      getTrendingMovieData();
     }
-    getTrendingMovieData();
   }, []);
 
   function setSwiperData(data: any) {
@@ -62,7 +63,7 @@ export default function Hero() {
           {
             btnName: StringConstant.WATCH_LIST,
             btnType: ButtonTypeEnum.SECONDARY_OUTLINE,
-            icon: <FiPlus />,
+            icon: IconConst.plus,
           },
         ],
       };
