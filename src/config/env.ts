@@ -7,5 +7,6 @@ export const env = {
   imdbApiUrl: import.meta.env.VITE_IMDB_BASE_URL,
   imdbImgUrl: import.meta.env.VITE_IMDB_BASE_IMAGE_URL,
   imdbApikey: import.meta.env.VITE_IMDB_API_KEY,
-  imdbAccessToken: import.meta.env.VITE_IMDB_TOKEN
+  imdbAccessToken: import.meta.env.VITE_IMDB_TOKEN,
+  baseName: import.meta.env.VITE_BASENAME
 };

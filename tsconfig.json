@@ -4,13 +4,13 @@
     "module": "ESNext",
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "jsx": "react-jsx",
-
-    "moduleResolution": "Node",
+    "moduleResolution": "bundler",      // Vite recommended
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "strict": true,
-
+    "noEmit": true,                      // Prevent JS emission in src/
+    "sourceMap": true,                   // Enable TSX debugging in browser
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]

@@ -9,6 +9,7 @@ interface ImportMetaEnv {
   readonly VITE_PORT?: string;
   readonly VITE_IMDB_TOKEN?: string;
   readonly VITE_IMDB_API_KEY?: string;
+  readonly VITE_BASENAME?: string;
 
 }
 

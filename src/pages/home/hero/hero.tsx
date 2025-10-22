@@ -11,6 +11,7 @@ import { ButtonTypeEnum } from "@/models/button.model";
 import { FiPlus } from "react-icons/fi";
 import { env } from "@/config/env";
 import './hero.scss';
+import { StorageConst } from "@/constants/storage-constant";
 
 export default function Hero() {
   const [heroData, setHeroData] = useState<SwiperDataConfigModel[]>([]);
@@ -27,6 +28,11 @@ export default function Hero() {
       setSwiperData(data);
       setError(error || API_ERROR.GENERIC_ERROR);
     };
+    const getMoviesFromSession = sessionStorage.getItem(StorageConst.TRENDING_MOVIES);
+    if(getMoviesFromSession) {
+      setHeroData(JSON.parse(getMoviesFromSession));
+      setLoading(false);
+    }
     getTrendingMovieData();
   }, []);
 
@@ -62,6 +68,7 @@ export default function Hero() {
       };
       heroSwiperData.push(swiperList);
     });
+    sessionStorage.setItem(StorageConst.TRENDING_MOVIES, JSON.stringify(heroSwiperData));
     setHeroData(heroSwiperData as SwiperDataConfigModel[]);
   }
 
