@@ -1,0 +1,296 @@
+/* ======================= */
+/* THEME VARIABLES FILE    */
+/* ======================= */
+
+/* ======================= */
+/* LIGHT THEME VARIABLES   */
+/* ======================= */
+:root {
+  /* Colors */
+  --color-brand-50: rgb(255, 250, 235);
+  --color-brand-100: rgb(255, 243, 205);
+  --color-brand-200: rgb(255, 230, 160);
+  --color-brand-300: rgb(255, 213, 110);
+  --color-brand-400: rgb(255, 194, 66);
+  --color-brand-500: rgb(255, 179, 39); /* Primary tone */
+  --color-brand-600: rgb(234, 150, 20);
+  --color-brand-700: rgb(202, 120, 12);
+  --color-brand-800: rgb(166, 90, 8);
+  --color-brand-900: rgb(133, 70, 7);
+  --color-brand-primary: rgb(255, 179, 39);
+
+  --color-neutral-0: rgb(255, 255, 255);
+  --color-neutral-50: rgb(250, 250, 250);
+  --color-neutral-100: rgb(245, 245, 245);
+  --color-neutral-200: rgb(229, 229, 229);
+  --color-neutral-300: rgb(212, 212, 212);
+  --color-neutral-400: rgb(163, 163, 163);
+  --color-neutral-500: rgb(115, 115, 115);
+  --color-neutral-600: rgb(82, 82, 82);
+  --color-neutral-700: rgb(64, 64, 64);
+  --color-neutral-800: rgb(38, 38, 38);
+  --color-neutral-900: rgb(23, 23, 23);
+  --color-neutral-950: rgb(10, 10, 10);
+
+  --color-error-50: rgb(254, 242, 242);
+  --color-error-100: rgb(254, 226, 226);
+  --color-error-200: rgb(254, 202, 202);
+  --color-error-300: rgb(252, 165, 165);
+  --color-error-400: rgb(248, 113, 113);
+  --color-error-500: rgb(239, 68, 68);
+  --color-error-600: rgb(220, 38, 38);
+  --color-error-700: rgb(185, 28, 28);
+  --color-error-800: rgb(153, 27, 27);
+  --color-error-900: rgb(127, 29, 29);
+
+  --color-warning-50: rgb(254, 252, 232);
+  --color-warning-100: rgb(254, 249, 195);
+  --color-warning-200: rgb(254, 240, 138);
+  --color-warning-300: rgb(253, 224, 71);
+  --color-warning-400: rgb(250, 204, 21);
+  --color-warning-500: rgb(234, 179, 8);
+  --color-warning-600: rgb(202, 138, 4);
+  --color-warning-700: rgb(161, 98, 7);
+  --color-warning-800: rgb(133, 77, 14);
+  --color-warning-900: rgb(113, 63, 18);
+
+  --color-success-50: rgb(240, 253, 244);
+  --color-success-100: rgb(220, 252, 231);
+  --color-success-200: rgb(187, 247, 208);
+  --color-success-300: rgb(134, 239, 172);
+  --color-success-400: rgb(74, 222, 128);
+  --color-success-500: rgb(34, 197, 94);
+  --color-success-600: rgb(22, 163, 74);
+  --color-success-700: rgb(21, 128, 61);
+  --color-success-800: rgb(22, 101, 52);
+  --color-success-900: rgb(20, 83, 45);
+
+  --color-default-font: rgb(23, 23, 23);
+  --color-subtext-color: rgb(115, 115, 115);
+  --color-default-background: rgb(255, 255, 255);
+
+  /* Fonts */
+  --font-body: 'Inter', sans-serif;
+  --font-body-bold: 'Inter', sans-serif;
+  --font-heading-1: 'Montserrat', sans-serif;
+  --font-heading-2: 'Montserrat', sans-serif;
+  --font-heading-3: 'Montserrat', sans-serif;
+  --font-caption: 'Inter', sans-serif;
+  --font-caption-bold: 'Inter', sans-serif;
+  --font-monospace-body: monospace;
+  --font-xs: 12px;
+  --font-sm: 14px;
+  --font-md: 16px;
+  --font-lg: 18px;
+  --font-xl: 24px;
+  --font-xl-10: 32x;
+
+  /* Shadows */
+  --shadow-sm: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0px 4px 16px -2px rgba(0, 0, 0, 0.08), 0px 2px 4px -1px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0px 12px 32px -4px rgba(0, 0, 0, 0.08), 0px 4px 8px -2px rgba(0, 0, 0, 0.08);
+
+  /* Border radius */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-full: 9999px;
+
+  /* Spacing */
+  --spacing-112: 28rem;
+  --spacing-144: 36rem;
+  --spacing-192: 48rem;
+  --spacing-256: 64rem;
+  --spacing-320: 80rem;
+}
+
+/* ======================= */
+/* DARK THEME VARIABLES    */
+/* ======================= */
+[data-theme="dark"] {
+  --color-brand-50: rgb(37, 30, 64);
+  --color-brand-100: rgb(44, 34, 80);
+  --color-brand-200: rgb(50, 39, 95);
+  --color-brand-300: rgb(57, 44, 114);
+  --color-brand-400: rgb(68, 53, 146);
+  --color-brand-500: rgb(88, 66, 195);
+  --color-brand-600: rgb(110, 86, 207);
+  --color-brand-700: rgb(124, 102, 220);
+  --color-brand-800: rgb(158, 140, 252);
+  --color-brand-900: rgb(241, 238, 254);
+  --color-brand-primary: rgb(110, 86, 207);
+
+  --color-neutral-0: rgb(2, 6, 23);
+  --color-neutral-50: rgb(15, 23, 42);
+  --color-neutral-100: rgb(30, 41, 59);
+  --color-neutral-200: rgb(51, 65, 85);
+  --color-neutral-300: rgb(71, 85, 105);
+  --color-neutral-400: rgb(100, 116, 139);
+  --color-neutral-500: rgb(148, 163, 184);
+  --color-neutral-600: rgb(203, 213, 225);
+  --color-neutral-700: rgb(226, 232, 240);
+  --color-neutral-800: rgb(241, 245, 249);
+  --color-neutral-900: rgb(248, 250, 252);
+  --color-neutral-950: rgb(255, 255, 255);
+
+  --color-default-font: rgb(248, 250, 252);
+  --color-subtext-color: rgb(148, 163, 184);
+  --color-default-background: rgb(2, 6, 23);
+}
+
+/* ======================= */
+/* UTILITY CLASSES         */
+/* ======================= */
+
+.bg-theme {
+  background-color: var(--color-default-background);
+}
+
+.bg-brand {
+  background-color: var(--color-brand-primary);
+}
+
+.text-theme {
+  color: var(--color-default-font);
+}
+
+.text-subtext {
+  color: var(--color-subtext-color);
+}
+
+.text-brand {
+  color: var(--color-brand-primary);
+}
+
+.shadow-sm-theme {
+  box-shadow: var(--shadow-sm);
+}
+
+.shadow-md-theme {
+  box-shadow: var(--shadow-md);
+}
+
+.shadow-lg-theme {
+  box-shadow: var(--shadow-lg);
+}
+
+.rounded-sm-theme {
+  border-radius: var(--radius-sm);
+}
+
+.rounded-md-theme {
+  border-radius: var(--radius-md);
+}
+
+.rounded-lg-theme {
+  border-radius: var(--radius-lg);
+}
+
+.rounded-full-theme {
+  border-radius: var(--radius-full);
+}
+
+body {
+  background-color: var(--color-default-background);
+  color: var(--color-default-font);
+  font-family: var(--font-body);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ======================= */
+/* BUTTON STYLES           */
+/* ======================= */
+
+/* Primary Button — Yellow background, Black text */
+.btn-primary {
+  background-color: var(--color-brand-primary);
+  color: var(--color-neutral-950);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-brand-600);
+  color: var(--color-neutral-0);
+}
+
+/* Dark theme overrides */
+[data-theme="dark"] .btn-primary {
+  background-color: var(--color-brand-500);
+  color: var(--color-neutral-950);
+}
+
+[data-theme="dark"] .btn-primary:hover {
+  background-color: var(--color-brand-600);
+  color: var(--color-neutral-0);
+}
+
+/* Secondary Button — Grey background, White text */
+.btn-secondary {
+  background-color: var(--color-neutral-600);
+  color: var(--color-neutral-0);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 0.6rem 1.2rem;
+  font-weight: 500;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-neutral-700);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-brand-primary); /* Text color uses primary brand */
+  border: 2px solid var(--color-brand-primary); /* Border uses primary brand */
+  border-radius: var(--radius-md);
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background-color: var(--color-brand-primary);
+  color: var(--color-neutral-0); /* White text on hover */
+  border-color: var(--color-brand-600); /* Slightly darker border on hover */
+}
+
+.btn-secondary-outline {
+  background-color: transparent;
+  color: var(--color-neutral-0); /* White text */
+  border: 2px solid var(--color-neutral-0); /* White border */
+  border-radius: var(--radius-md);
+  padding: 0.6rem 1.2rem;
+  font-weight: 500;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary-outline:hover {
+  background-color: var(--color-neutral-0); /* White background on hover */
+  color: var(--color-neutral-950); /* Dark text on hover */
+  border-color: var(--color-neutral-0);
+}
+
+
+
+/* Dark theme overrides */
+[data-theme="dark"] .btn-secondary {
+  background-color: var(--color-neutral-400);
+  color: var(--color-neutral-950);
+}
+
+[data-theme="dark"] .btn-secondary:hover {
+  background-color: var(--color-neutral-300);
+}
