@@ -6,14 +6,14 @@ import SwiperComponent from "@/components/swiper/swiper-component";
 import { HeroSwiperConfig } from "@/utils/swiper.config";
 import { NumberConstant } from "@/constants/Numbers.constant";
 import { SwiperDataConfigModel } from "@/components/swiper/swiper-data.model";
-import { StringConstant } from "@/constants/string-constant";
+import { API_ERROR, StringConstant } from "@/constants/string-constant";
 import { ButtonTypeEnum } from "@/models/button.model";
 import { FiPlus } from "react-icons/fi";
 import { env } from "@/config/env";
 import './hero.scss';
 
 export default function Hero() {
-  const [heroData, setHeroData] = useState([]);
+  const [heroData, setHeroData] = useState<SwiperDataConfigModel[]>([]);
   const [loading, setLoading] = useState(true);
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -25,7 +25,7 @@ export default function Hero() {
         await fetchTrendingMovies();
       setLoading(loading);
       setSwiperData(data);
-      setError(error);
+      setError(error || API_ERROR.GENERIC_ERROR);
     };
     getTrendingMovieData();
   }, []);
@@ -62,7 +62,7 @@ export default function Hero() {
       };
       heroSwiperData.push(swiperList);
     });
-    setHeroData(heroSwiperData);
+    setHeroData(heroSwiperData as SwiperDataConfigModel[]);
   }
 
   return loading ? (

@@ -17,5 +17,5 @@ export enum APIMethodEnum {
 export interface APIResponseModel {
     data: any | null;
     loading: boolean;
-    error: string | null;
+    error: string;
 }
